@@ -1,0 +1,59 @@
+Testing Method test_init: 
+
+Test the initial connection to data base- If correct the query should return 162 rows
+Does the query return 162 rows? True
+
+Testing Find By Template Method:
+if True should return a list of two dictionaries with above field
+[{'playerID': 'willite01', 'nameFirst': 'Ted', 'nameLast': 'Williams', 'birthCity': 'San Diego'}, {'playerID': 'willitr01', 'nameFirst': 'Trevor', 'nameLast': 'Williams', 'birthCity': 'San Diego'}]
+
+Testing Find By Primary Key Method: The test is conducted on the appearances table to check the multiple key case
+If True should print a list of one dictionary with all the fields:
+{
+  "yearID": "1960",
+  "teamID": "BOS",
+  "lgID": "AL",
+  "playerID": "willite01",
+  "G_all": "113",
+  "GS": "87",
+  "G_batting": "113",
+  "G_defense": "86",
+  "G_p": "0",
+  "G_c": "0",
+  "G_1b": "0",
+  "G_2b": "0",
+  "G_3b": "0",
+  "G_ss": "0",
+  "G_lf": "86",
+  "G_cf": "0",
+  "G_rf": "0",
+  "G_of": "86",
+  "G_dh": "0",
+  "G_ph": "26",
+  "G_pr": "0"
+}
+
+Testing Del by Temp:
+Number of rows before delete 19617
+Number of deleted rows 2
+Number of rows after delete 19615
+
+Testing Del by Key:--Number of deleted data points:
+number of deleted data points:  1
+
+Testing update by template:
+Number of matching rows=  2
+Number of updated rows should be equal to number of matching rows
+Number of updated rows =  2
+
+Testing update rows by key:
+Number of matching rows=  1
+Number of updated field =  1
+Number of Rows =  19614
+Number of Rows =  19615
+
+Test insert method: One row with playerID = "brewech01" is selected. The player id is changes to avoid confusion in primary key.
+Then this row is added to the end
+
+Number of Rows before insert =  19615
+Number of Rows after insert =  19616

@@ -29,5 +29,13 @@ def t_load():
 
     print("Created table = " + str(csv_tbl))
 
+def test_match():
+    
+    row = {"cool": 'yes', 'db':'no '}
+    t = {"cool":'12'}
+    result = CSVDataTable.matches_template(row, t)
+    print(result)
 
-t_load()
+
+#t_load()
+test_match()

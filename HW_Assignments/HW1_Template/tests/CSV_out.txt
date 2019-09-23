@@ -1,0 +1,159 @@
+Testing Class CSVDataTable
+Testing Method test_init:
+True
+DEBUG:root:CSVDataTable._load: Loaded 19617 rows
+DEBUG:root:CSVDataTable.__init__: data = {
+  "table_name": "people",
+  "connect_info": {
+    "directory": "C:\\Users\\NiFa\\Desktop\\Data Science\\database\\HW1\\repo\\HW_Assignments\\HW1_Template\\Data\\Baseball",
+    "file_name": "People.csv"
+  },
+  "key_columns": null,
+  "debug": true
+}
+
+ Testting Find_by_Template Method 
+  [{'nameFirst': 'Ted', 'nameLast': 'Williams', 'birthCity': 'San Diego', 'deathDay': '5'}, {'nameFirst': 'Trevor', 'nameLast': 'Williams', 'birthCity': 'San Diego', 'deathDay': ''}]
+
+Testing Delete By Template. If correct the number of data points should reduce by 2: 
+DEBUG:root:CSVDataTable._load: Loaded 19617 rows
+DEBUG:root:CSVDataTable.__init__: data = {
+  "table_name": "people",
+  "connect_info": {
+    "directory": "C:\\Users\\NiFa\\Desktop\\Data Science\\database\\HW1\\repo\\HW_Assignments\\HW1_Template\\Data\\Baseball",
+    "file_name": "People.csv"
+  },
+  "key_columns": null,
+  "debug": true
+}
+
+number of data points before delete: 19617
+number of deleted data points: 2
+number of data points after delete: 19615
+
+Testing update By Template. If correct the number of data points should reduce by 2: 
+DEBUG:root:CSVDataTable._load: Loaded 19617 rows
+DEBUG:root:CSVDataTable.__init__: data = {
+  "table_name": "people",
+  "connect_info": {
+    "directory": "C:\\Users\\NiFa\\Desktop\\Data Science\\database\\HW1\\repo\\HW_Assignments\\HW1_Template\\Data\\Baseball",
+    "file_name": "People.csv"
+  },
+  "key_columns": null,
+  "debug": true
+}
+Number of updated fields: 2
+
+
+Updated Fields:  [
+  {
+    "playerID": "willite01",
+    "birthYear": "1918",
+    "birthMonth": "8",
+    "birthDay": "30",
+    "birthCountry": "USA",
+    "birthState": "CA",
+    "birthCity": "TESTCITY",
+    "deathYear": "2002",
+    "deathMonth": "7",
+    "deathDay": "5",
+    "deathCountry": "USA",
+    "deathState": "FL",
+    "deathCity": "Inverness",
+    "nameFirst": "Ted",
+    "nameLast": "TESTNAME",
+    "nameGiven": "Theodore Samuel",
+    "weight": "205",
+    "height": "75",
+    "bats": "L",
+    "throws": "R",
+    "debut": "1939-04-20",
+    "finalGame": "1960-09-28",
+    "retroID": "willt103",
+    "bbrefID": "willite01"
+  },
+  {
+    "playerID": "willitr01",
+    "birthYear": "1992",
+    "birthMonth": "4",
+    "birthDay": "25",
+    "birthCountry": "USA",
+    "birthState": "CA",
+    "birthCity": "TESTCITY",
+    "deathYear": "",
+    "deathMonth": "",
+    "deathDay": "",
+    "deathCountry": "",
+    "deathState": "",
+    "deathCity": "",
+    "nameFirst": "Trevor",
+    "nameLast": "TESTNAME",
+    "nameGiven": "Trevor Anthony",
+    "weight": "230",
+    "height": "75",
+    "bats": "R",
+    "throws": "R",
+    "debut": "2016-09-07",
+    "finalGame": "2018-09-27",
+    "retroID": "willt002",
+    "bbrefID": "willitr01"
+  }
+]
+
+
+Checking if fields matching  template are still in data
+if the function works correctly this list should be empty
+[]
+Test the insert method. The first row of data is inserted as a new data point
+DEBUG:root:CSVDataTable._load: Loaded 19617 rows
+DEBUG:root:CSVDataTable.__init__: data = {
+  "table_name": "appearances",
+  "connect_info": {
+    "directory": "C:\\Users\\NiFa\\Desktop\\Data Science\\database\\HW1\\repo\\HW_Assignments\\HW1_Template\\Data\\Baseball",
+    "file_name": "People.csv"
+  },
+  "key_columns": [
+    "playerID",
+    "teamID",
+    "yearID"
+  ],
+  "debug": true
+}
+
+Did we add one row to the data? 
+True
+Is first row of data equal to last row?
+True
+Testing find by primary key method. The primary key is ["playerID", "teamID", "yearID"].
+DEBUG:root:CSVDataTable._load: Loaded 19617 rows
+DEBUG:root:CSVDataTable.__init__: data = {
+  "table_name": "people",
+  "connect_info": {
+    "directory": "C:\\Users\\NiFa\\Desktop\\Data Science\\database\\HW1\\repo\\HW_Assignments\\HW1_Template\\Data\\Baseball",
+    "file_name": "People.csv"
+  },
+  "key_columns": [
+    "playerID"
+  ],
+  "debug": true
+}
+[]
+DEBUG:root:CSVDataTable._load: Loaded 19617 rows
+DEBUG:root:CSVDataTable.__init__: data = {
+  "table_name": "people",
+  "connect_info": {
+    "directory": "C:\\Users\\NiFa\\Desktop\\Data Science\\database\\HW1\\repo\\HW_Assignments\\HW1_Template\\Data\\Baseball",
+    "file_name": "People.csv"
+  },
+  "key_columns": [
+    "playerID"
+  ],
+  "debug": true
+}
+
+Testing del by primary key method. One data point should be deleted
+number of deleted data points:  1
+DEBUG:root:CSVDataTable._load: Loaded 19617 rows
+
+Testing update by primary key method. One data point should be updated
+number of updated data points:  1
